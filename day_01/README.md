@@ -10,17 +10,6 @@ This was really simple in javascript as the native parseInt
 method sees '-5' as -5 and '+5' as 5. This allowed me to write a very trivial reduce method that  
 added the result of parseInt for each string.
 
-'''javascript
-+5-5+10
-''''
-V
-'''javascript
-5 + -5 + 10
-''''
-V
-'''javascript
-10
-''''
 
 ## Part #2
 
