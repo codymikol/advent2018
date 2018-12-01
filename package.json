@@ -1,0 +1,17 @@
+{
+  "name": "advent2018",
+  "version": "1.0.0",
+  "description": "Advent of code for 2018",
+  "main": "index.js",
+  "repository": "git@github.com:codymikol/advent2018.git",
+  "author": "Cody Mikol <codymikol@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jasmine": "^3.3.0",
+    "karma": "^3.1.1",
+    "karma-chrome-launcher": "^2.2.0"
+  },
+  "devDependencies": {
+    "karma-jasmine": "^2.0.1"
+  }
+}
