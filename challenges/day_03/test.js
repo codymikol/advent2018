@@ -39,6 +39,19 @@ describe('Day #3', function () {
     });
 
     describe('Part #2', function () {
+
+        it('should be able to increment a map properly', function () {
+
+            let map = new Map();
+
+            Day3.incrementMapKey(map, '1:10', 1);
+            Day3.incrementMapKey(map, '1:3', 2);
+            Day3.incrementMapKey(map, '1:10', 3);
+
+            expect(Array.from(map)).toEqual([["1:10", [1, 3]], ["1:3", [2]]]);
+
+        });
+
         it('should return the non overlapping input', function () {
             expect(Day3.getNonOverlapping(input))
                 .toEqual('hi')
