@@ -29,7 +29,7 @@ export default class Day3 {
         return Array.from(processed.allTerritories)
             .filter(function (value) {
                return !processed.overlappedTerritories.has(value)
-            });
+            })[0]
     }
 
     static incrementMapKey(map, key, territoryId){
@@ -38,10 +38,6 @@ export default class Day3 {
         } else {
             map.set(key, [territoryId])
         }
-    }
-
-    static addOverlappedTerritories(){
-
     }
 
     static processInputs(input) {
@@ -63,8 +59,12 @@ export default class Day3 {
 
                         if(col.spaces.get(key).length === 2) {
                             col.overlapping++;
+                        }
+
+                        if(col.spaces.get(key).length > 1) {
                             col.spaces.get(key).forEach((territory) => { col.overlappedTerritories.add(territory) })
                         }
+
                     }
                 }
 

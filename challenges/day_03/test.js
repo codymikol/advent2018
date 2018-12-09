@@ -53,8 +53,7 @@ describe('Day #3', function () {
         });
 
         it('should return the non overlapping input', function () {
-            expect(Day3.getNonOverlapping(input))
-                .toEqual('hi')
+            expect(Day3.getNonOverlapping(input)).toEqual(574)
         });
     });
 
