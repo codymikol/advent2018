@@ -22,6 +22,14 @@ describe('Day #5', function () {
         it('should return the correct output length', function () {
             expect(Day5.react(input).length).toEqual(11754);
         });
-    })
+    });
+
+    describe('Part #2', function () {
+        
+        it('should return a list of polymer lengths for each char', function () {
+            expect(Day5.getSmallestPolymer(input)).toEqual(4098);
+        });
+        
+    });
     
 });
