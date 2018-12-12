@@ -1087,18 +1087,24 @@ describe('Day #4', function () {
 
         it('should work for WAKE actions', function () {
             expect(Day4.getParsedRecord('[1518-06-24 00:56] wakes up'))
-                .toEqual({utc: new Date('1518-06-24T04:05:00.000Z'), action: 'WAKE'});
+                .toEqual({minutes: '56', action: 'WAKE'});
         });
 
         it('should work for SLEEP actions', function () {
             expect(Day4.getParsedRecord('[1518-06-13 00:45] falls asleep'))
-                .toEqual({utc: new Date('1518-06-13T04:04:00.000Z'), action: 'SLEEP'});
+                .toEqual({minutes: '45', action: 'SLEEP'});
         });
 
         it('should work for START actions and include the proper id', function () {
             expect(Day4.getParsedRecord('[1518-06-24 00:00] Guard #263 begins shift'))
-                .toEqual({utc: new Date('1518-06-24T04:00:00.000Z'), action: 'START', id: 263});
+                .toEqual({minutes: '00', action: 'START', id: 263});
         });
+    });
+
+    describe('getSorted', function () {
+       it('should return the correct value', function () {
+           expect(Day4.getSorted(input)).toEqual('hi')
+       });
     });
 
     describe('Part #1', function () {
